@@ -1,0 +1,12 @@
+DirectedGraph:	A:{B} B:{C,D} C:{A} D:{A,C}
+UndirectedGraph:	A:{B} B:{A,C,D} C:{B} D:{B}
+
+Graph:	A:{B} B:{C,D} C:{A} D:{A,C}
+DirectedGraph:	A:={B} B:{C,D} C:{A} D:{A,C}
+UndirectedGraph:	1:(2) 2:{1,3} 3:{2}
+DirectedGraph:	A:{B} B:{C,D} C:{A} D:{A,C}
+UndirectedGraph:	1:{2} 2:{1,3} 3:{2}
+
+DirectedGraph:	aa:{bb,cc} bb:{} cc:{cc} dd:{} ee:{aa}
+UndirectedGraph:	aa:{bb,cc} bb:{aa} cc:{aa,dd} dd:{cc} ee:{}
+UndirectedGraph#	aa:{bb,cc} bb:{aa} cc:{aa,dd} dd:{cc} ee:{}

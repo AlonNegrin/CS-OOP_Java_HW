@@ -1,0 +1,6 @@
+line number=3, input line=, Error message = null
+line number=3, input line=Graph:	A:{B} B:{C,D} C:{A} D:{A,C}, Error message = The graph type is not valid
+line number=3, input line=DirectedGraph:	A:={B} B:{C,D} C:{A} D:{A,C}, Error message = Exception in scanning the graph string
+line number=3, input line=UndirectedGraph:	1:(2) 2:{1,3} 3:{2}, Error message = Exception in scanning the graph string
+line number=5, input line=, Error message = null
+line number=7, input line=UndirectedGraph#	aa:{bb,cc} bb:{aa} cc:{aa,dd} dd:{cc} ee:{}, Error message = The graph type is not valid
