@@ -66,16 +66,14 @@ public class JScrollPaneTest
       JPanel jp = new JPanel();
       jp.setBackground( Color.yellow );
       jp.add( jta );
-      JScrollPane jsp = new JScrollPane( jp, 
-                                         ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, 
-                                         ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED );
+      MyScrollPane msp = new MyScrollPane( jp);
 
       int actualWidth = 200;
       int actualHeight = 400;
       JFrame frame = new JFrame( "JScrollPane Demo" );
       frame.setPreferredSize( new Dimension( actualWidth, actualHeight ) );
       frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-      frame.add( jsp );
+      frame.add( msp );
       frame.pack();
       frame.setVisible( true );
    }
