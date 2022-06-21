@@ -47,14 +47,14 @@ public class Main {
         jp.setBackground( Color.yellow );
         jp.add( jta );
         MyScrollPane msp = new MyScrollPane( jp);
-//
-//        int actualWidth = 200;
-//        int actualHeight = 400;
-//        JFrame frame = new JFrame( "JScrollPane Demo" );
-//        frame.setPreferredSize( new Dimension( actualWidth, actualHeight ) );
-//        frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-//        frame.add( msp );
-//        frame.pack();
-//        frame.setVisible( true );
+
+        int actualWidth = 200;
+        int actualHeight = 400;
+        JFrame frame = new JFrame( "JScrollPane Demo" );
+        frame.setPreferredSize( new Dimension( actualWidth, actualHeight ) );
+        frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        frame.add( msp );
+        frame.pack();
+        frame.setVisible( true );
     }
 }

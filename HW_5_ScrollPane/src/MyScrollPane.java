@@ -5,7 +5,6 @@ import java.awt.event.ComponentListener;
 
 public class MyScrollPane extends JPanel {
 
-    JFrame mainFrame;
     JScrollBar westScrollBar;
     JScrollBar southScrollBar;
     JPanel scrollPanel;
@@ -55,16 +54,16 @@ public class MyScrollPane extends JPanel {
         this.addComponentListener(new ComponentListener() {
             @Override
             public void componentResized(ComponentEvent e) {
-                westScrollBar.setMaximum(contentHeight);
+                westScrollBar.setMaximum(contentHeight - scrollPanel.getHeight() + southScrollBar.getHeight() / 2);
                 westScrollBar.setMinimum(0);
-                westScrollBar.setVisibleAmount(contentHeight / 4);
 
-                southScrollBar.setMaximum(contentWidth);
+                southScrollBar.setMaximum(contentWidth - scrollPanel.getWidth() + westScrollBar.getWidth() / 2);
                 southScrollBar.setMinimum(0);
-                southScrollBar.setVisibleAmount(contentWidth / 4);
 
-                southScrollBar.setVisible(scrollPanel.getHeight() <= contentHeight);
-                westScrollBar.setVisible(scrollPanel.getWidth() <= contentWidth);
+                westScrollBar.setVisible(scrollPanel.getHeight() <= contentHeight);
+                southScrollBar.setVisible(scrollPanel.getWidth() <= contentWidth);
+
+                contentPage.setSize(scrollPanel.getSize());
             }
 
 
